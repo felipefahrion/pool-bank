@@ -1,0 +1,16 @@
+{
+  "name": "voting-sicredi",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon",
+    "test": "jest"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "nodemon": "^2.0.15",
+    "ts-node": "^10.4.0",
+    "uuid": "^8.3.2"
+  }
+}
