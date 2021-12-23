@@ -57,7 +57,6 @@ app.get(ApiRoutes.GET_PAUTA_BY_ID, function (req, res) {
         const pautaById = pautaService.getPautaById(idPauta)
         res.json(pautaById)
     } catch (e) {
-        console.log(e);
         res.status(200).json(e.message)
     }
 })
@@ -70,7 +69,6 @@ app.put(ApiRoutes.VOTE_ON_PAUTA, function (req, res) {
         
         res.status(200).json("Voto realizado com sucesso!")
     } catch (e) {
-        console.log(e);
         res.status(200).json(e.message)
     }
 })
@@ -91,7 +89,6 @@ app.post(ApiRoutes.START_SESSAO, function (req, res) {
         const sessao = sessaoService.startSessao(idPauta, duracao)
         res.json(sessao)
     } catch (e) {
-        console.log(e);
         res.status(200).json(e.message)   
     }
 })

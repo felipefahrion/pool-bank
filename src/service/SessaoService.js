@@ -23,7 +23,6 @@ class SessaoService{
     }
 
     hasOpenedSessao(idPauta){
-        console.log(this.pautaService.getPautaById(idPauta));
         if(this.sessoes.findIndex(sessao => sessao.idPauta === idPauta) === -1 && this.pautaService.getPautaById(idPauta))
             return true
         throw new Error("Sessão com pauta já existente!")
@@ -35,7 +34,6 @@ class SessaoService{
 
 
     calculateResults(idSessao, idPauta){
-        console.log(this.pautaService.getPautaById(idPauta));
         const votesOnPauta = this.pautaService.getPautaById(idPauta).votos 
 
         const votosSim = votesOnPauta.filter(o => o.voto === "Sim")

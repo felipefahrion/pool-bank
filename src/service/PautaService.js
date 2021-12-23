@@ -13,7 +13,6 @@ class PautaService{
 
     getPautaById(idPauta){
         const pauta = this.pautas.find(pauta => pauta.idPauta === idPauta)
-        console.log(pauta);
         if(pauta){
             return pauta
         }
