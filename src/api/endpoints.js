@@ -1,5 +1,3 @@
-const uuid = require('uuid');
-const ApiRoutes = require('../routes')
 const PautaService = require("../service/PautaService")
 const VotoService = require("../service/VotoService");
 const SessaoService = require("../service/SessaoService");

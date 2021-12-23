@@ -2,6 +2,7 @@ const cors = require("cors")
 const express = require('express')
 const swaggerUi = require('swagger-ui-express')
 const swaggerFile = require('./swagger_output.json')
+const logRequests = require('./src/common/log')
 const app = express()
 const port = 8082;
 
@@ -11,17 +12,6 @@ app.use(cors());
 app.listen(port, function() {
     console.log("Starting the app...");
 })
-
-function logRequests(req, res, next) {
-    const { method, url, params} = req
-
-    const logLabel = `[${method.toUpperCase()}] ${url}`
-    console.time(logLabel)
-
-    next()
-
-    console.timeEnd(logLabel)
-}
 
 app.use(logRequests)
 
