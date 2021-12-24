@@ -76,7 +76,7 @@ Para acessar a documentação Swagger do projeto, acessar a url: [localhost:8082
 - Tarefa 3: não realizei 
 - Tarefa 4: uma das possibildades de versionamento da API é a utilziação de /v1, /v2 antes de acessar algum recurso. Essa maneira é possível utilizar novos serviços, realizar POCs, etc. 
 
-## TODOS: 
+## TO DOs: 
 - [ ] Terminar a implementação do BD
 - [ ] Testes unitários das APIs
 - [ ] Melhorar a documentação Swagger
