@@ -1,4 +1,5 @@
 const Voto = require("../models/Voto");
+const axios = require('axios');
 
 class VotoService{
     constructor(pautaService){
@@ -15,7 +16,8 @@ class VotoService{
         const pautaIndex = this.pautaService.getPautaIndex(idPauta)
         const pauta = this.pautaService.getPautaById(idPauta)
 
-        if(this.pautaService.isValidPauta(idPauta) && this.canCooperadoVoteInPauta(idCooperado, pauta.votos)){
+        if(this.pautaService.isValidPauta(idPauta) && 
+        this.canCooperadoVoteInPauta(idCooperado, pauta.votos)){
             const newVote = new Voto(
                 idPauta,
                 idCooperado,
