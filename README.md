@@ -81,6 +81,6 @@ Para acessar a documentação Swagger do projeto, acessar a url: [localhost:8082
 - [ ] Terminar a implementação do BD
 - [ ] Testes unitários das APIs
 - [ ] Melhorar a documentação Swagger
-- [ ] Colocar expections personalizadas nas chamadas de `Throw`
+- [ ] Colocar exceptions personalizadas nas chamadas de `Throw`
 - [ ] Realizar a validação através do CPF
 - [ ] Implementar a camada de mensageria 
