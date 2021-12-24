@@ -8,7 +8,8 @@ Executar as linhas abaixo em ordem:
 - `docker run --rm -d -p 8082:8082 -name pool pool`
 
 ## Usando a aplicação
-Foi disponibilizado uma *collection* no qual é possível realizar o import dentro do Postman para realizar os testes. 
+Foi disponibilizado uma *collection* dentro da pasta `docs` na root do projeto, no qual é possível realizar o import dentro do Postman para realizar os testes. 
+
 - Criar uma pauta
 ```
 POST /pauta HTTP/1.1
