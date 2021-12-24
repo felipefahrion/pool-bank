@@ -19,4 +19,25 @@ app.use('/doc', swaggerUi.serve, swaggerUi.setup(swaggerFile))
 
 require('./src/api/endpoints')(app)
 
+
+var MongoClient = require('mongodb').MongoClient
+
+MongoClient.connect('mongodb://root:rootpassword@localhost:27017', function (err, db) {
+  if (err) throw err
+
+const myDB = db.db("mydb")
+
+//   myDB.createCollection("votos", function(err, res) {
+//     if (err) throw err;
+//     console.log("Collection created!");
+//     db.close();
+//   });
+
+  myDB.collection("votos").find({}).toArray(function(err, result) {  
+    if (err) throw err;  
+    console.log(result);  
+    db.close();  
+  });  
+})
+
 module.exports = app
