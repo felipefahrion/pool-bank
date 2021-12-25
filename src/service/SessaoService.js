@@ -37,7 +37,7 @@ class SessaoService{
         const votesOnPauta = this.pautaService.getPautaById(idPauta).votos 
 
         const votosSim = votesOnPauta.filter(o => o.voto === "Sim")
-        const votosNao = votesOnPauta.filter(o => o.voto === "Nao")
+        const votosNao = votesOnPauta.filter(o => o.voto === "Não")
 
         this.pautas[this.pautaService.getPautaIndex(idPauta)] = { ...this.pautas[this.pautaService.getPautaIndex(idPauta)], status: 'closed' }
         
